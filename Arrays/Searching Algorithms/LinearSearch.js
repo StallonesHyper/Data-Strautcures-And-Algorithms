@@ -1,13 +1,13 @@
-var newArray = [1, 9, 4, 2, 7, 6, 8, 0];
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+var x = 10;
 
-function findNumber(x, zArray) {
-  var anotherArray = zArray;
-  for (let i = 0; i < zArray.length; i++) {
-    if (anotherArray[i] === x) {
+function linearSearch(newArray, x) {
+  for (var i = 0; i < newArray.length; i++) {
+    if (newArray[i] === x) {
       return i;
     }
   }
+  return -1;
 }
 
-console.log(findNumber(9, newArray));
-console.log(findNumber(0, newArray));
+console.log(linearSearch(myArray, x));
